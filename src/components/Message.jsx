@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { ChatContext } from "../context/ChatContext";
 
-function Message() {
+function Message({ message }) {
+  console.log(message);
+
+  const { currentUser } = useContext(AuthContext);
+  const { data } = useContext(ChatContext);
+
   return (
-    <div className="message owner">
-      <div className="messageInfo">
+    <div className="message owner ">
+      {/* <div className="messageInfo">
         <img
-          src="https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?b=1&s=612x612&w=0&k=20&c=V0w97TpL-tuD3vdWC6AcD_nLE4BiAEN12mJdVZGw51g="
+          src={}
           alt=""
         />
-        <span>Just Now</span>
+        <span style={{ fontSize: 12, marginTop: 5 }}>Just Now</span>
       </div>
       <div className="messageContent">
         <p>Hello</p>
         <img
-          src="https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?b=1&s=612x612&w=0&k=20&c=V0w97TpL-tuD3vdWC6AcD_nLE4BiAEN12mJdVZGw51g="
+          src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
           alt=""
         />
-      </div>
+      </div> */}
     </div>
   );
 }

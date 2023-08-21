@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "../components/Sidebar";
 import Chat from "../components/Chat";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+function Home() {
+  const { currentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  if (!currentUser) {
+    navigate("/login");
+  }
+
   return (
     <div className="home">
       <div className="container">
@@ -11,6 +20,6 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;
