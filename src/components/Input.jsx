@@ -13,7 +13,6 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { updateProfile } from "firebase/auth";
 
 function Input() {
   const [text, setText] = useState("");
@@ -84,7 +83,6 @@ function Input() {
           style={{ display: "none" }}
           id="file"
           onChange={(e) => setFile(e.target.files[0])}
-          value={file}
         />
         <label htmlFor="file">
           <img src={img} alt="" />

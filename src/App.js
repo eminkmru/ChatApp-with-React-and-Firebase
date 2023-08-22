@@ -5,15 +5,14 @@ import Register from "./pages/Register";
 import "./style/style.scss";
 
 function App() {
+  debugger;
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

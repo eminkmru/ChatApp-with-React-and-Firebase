@@ -111,7 +111,7 @@ $darkColor: #2f2d52;
   .container {
     box-shadow: 0px 0px 57px -8px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
-    width: 80%;
+    width: 70%;
     height: 80%;
     display: flex;
     overflow: hidden;
@@ -208,8 +208,9 @@ $darkColor: #2f2d52;
             font-weight: 500;
           }
           p {
-            font-size: 14px;
+            font-size: 13px;
             color: lightgray;
+            margin: 0;
           }
         }
       }
@@ -219,7 +220,7 @@ $darkColor: #2f2d52;
       flex: 2;
       .chatInfo {
         height: 50px;
-        background-color: #5d5b8d;
+        background-color: #03004e;
         display: flex;
         align-items: center;
         justify-content: space-between;
